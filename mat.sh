@@ -5,4 +5,6 @@
 #       -X POST \
 #       "https://wavemaxlive.com/login"
 
-curl -b cookie.txt "https://wavemaxlive.com/machines"
+# curl -b cookie.txt "https://wavemaxlive.com/machines"
+
+curl -b cookie.txt "https://wavemaxlive.com/machines" | jq -r '.display_locations' | jq -r '.[0]'
