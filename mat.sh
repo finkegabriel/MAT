@@ -7,4 +7,5 @@
 
 # curl -b cookie.txt "https://wavemaxlive.com/machines"
 
+#get status of washer and dryers
 curl -b cookie.txt "https://wavemaxlive.com/machines" | jq -r '.display_locations' | jq -r '.[0]'
